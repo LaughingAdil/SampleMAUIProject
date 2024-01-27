@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DepeInj.View.PersonDisplay"
+             Title="PersonDisplay">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Spacing="10">
+
+       <HorizontalStackLayout Spacing="10">
+            <Label Text="Person Name:"  />
+            <Label Text="{Binding PersonName}" BackgroundColor="LightGrey"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Spacing="10">
+            <Label Text="Person Age:"/>
+            <Label Text="{Binding PersonAge}"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Spacing="10">
+            <Label Text="Person Occupation:"/>
+            <Label Text="{Binding PersonOccupation}"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+        <Button Text="Fetch Data" Command="{Binding FetchDataCommand}" />
+        <Button Text="Go to List View" Command="{Binding NavigateBtnCommand }"></Button>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+
+</ContentPage>
